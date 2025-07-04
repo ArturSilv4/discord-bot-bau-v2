@@ -19,5 +19,5 @@ module.exports = async function handleModal(interaction) {
   const logChannel = await interaction.client.channels.fetch(logChannelId);
   await logChannel.send({ embeds: [embed] });
 
-  await interaction.reply({ content: `Registro de ${tipo} enviado com sucesso.`, ephemeral: true });
+  await interaction.reply({ content: `Registro de ${tipo} enviado com sucesso.`, flags: 64 });
 };
